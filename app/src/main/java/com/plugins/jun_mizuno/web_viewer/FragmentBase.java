@@ -16,6 +16,13 @@ public abstract class FragmentBase extends Fragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+    }
 
+    public void open() {
+        Bundle arg = getArguments();
+        if (arg != null) {
+
+        }
     }
 }
