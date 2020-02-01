@@ -20,9 +20,13 @@ public abstract class FragmentBase extends Fragment {
     }
 
     public void open() {
+
+    }
+
+    protected void getArgumentState() {
         Bundle arg = getArguments();
         if (arg != null) {
-
+            // @memo. 変数を受け取る場合はここで
         }
     }
 }

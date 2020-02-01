@@ -1,30 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#000000">
 
-    <FrameLayout
-        android:id="@+id/fragment_first"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="360dp">
-
-        <TextView
-            android:text="hello_fragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/fragment_second"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:text="hello_fragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </FrameLayout>
+        android:layout_height="match_parent"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:textColor="#ff0000"
+        android:text="Fragment Base" />
 </LinearLayout>
