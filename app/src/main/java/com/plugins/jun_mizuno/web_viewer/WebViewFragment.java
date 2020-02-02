@@ -16,4 +16,9 @@ public class WebViewFragment extends FragmentBase {
     public void onViewCreated(View view, Bundle saveInstanceState) {
         super.onViewCreated(view, saveInstanceState);
     }
+
+    @Override
+    public void open() {
+        super.open();
+    }
 }

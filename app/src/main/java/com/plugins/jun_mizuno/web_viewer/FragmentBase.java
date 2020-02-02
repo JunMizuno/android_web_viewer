@@ -6,11 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public abstract class FragmentBase extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // @memo. 継承先でレイアウトを指定してViewを生成すること
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
@@ -20,10 +23,13 @@ public abstract class FragmentBase extends Fragment {
     }
 
     public void open() {
-
+        receivedArgumentState();
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, this);
+        transaction.commit();
     }
 
-    protected void getArgumentState() {
+    protected void receivedArgumentState() {
         Bundle arg = getArguments();
         if (arg != null) {
             // @memo. 変数を受け取る場合はここで
