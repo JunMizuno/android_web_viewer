@@ -25,8 +25,12 @@ public abstract class FragmentBase extends Fragment {
     public void open() {
         receivedArgumentState();
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, this);
+        transaction.replace(R.id.main_layout, this);
         transaction.commit();
+    }
+
+    public void close() {
+
     }
 
     protected void receivedArgumentState() {
